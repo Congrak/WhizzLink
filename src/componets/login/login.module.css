@@ -1,0 +1,15 @@
+.buttonContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    height: fit-content;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    color: #cbc4c4;
+}

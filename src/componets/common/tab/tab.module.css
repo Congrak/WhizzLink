@@ -1,0 +1,44 @@
+.navigationBox,
+.navigationBoxChecked {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.navigationBox::after,
+.navigationBoxChecked::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 1px;
+    background-color: transparent;
+    transition: width 0.3s ease, background-color 0.3s ease, left 0.3s ease;
+}
+
+.navigationBox:hover::after {
+    width: 100%;
+    left: 0;
+    background-color: #666666;
+}
+
+.navigationBoxChecked::after {
+    width: 100%;
+    left: 0;
+    background-color: #F4652D;
+}
+
+@media only screen and (max-width: 960px) {
+    .navigationBox,
+    .navigationBoxChecked {
+        padding: 5px;
+        font-size: 0.4rem;
+    }
+}

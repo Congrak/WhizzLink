@@ -1,0 +1,37 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: #FFFFFF 2px solid;
+}
+
+.logo {
+    width: fit-content;
+    height: 100%;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.endElement {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 20px;
+}
+
+.version {
+    color: #FFFFFF;
+    font-size: 12px;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid #FFFFFF;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 5px 10px;
+}

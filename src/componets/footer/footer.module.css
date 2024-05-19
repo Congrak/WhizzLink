@@ -1,0 +1,21 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-top: #FFFFFF 2px solid;
+    color: #FFFFFF;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: fit-content;
+    margin-right: 20px;
+}
+
+.made {
+    font-size: small;
+    margin-left: 20px;
+}

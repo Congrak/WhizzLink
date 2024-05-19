@@ -1,0 +1,38 @@
+.outline {
+    border: 1px solid #FFFFFF;
+    background-clip: padding-box;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.8rem;
+    &:hover {
+        background-color: #282828;
+    }
+}
+
+.orange {
+    background-color: #F4652D;
+    color: #FFFFFF;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.8rem;
+    cursor: pointer;
+    border: none;
+    font-size: large;
+    &:hover {
+        background-color: #f67440;
+    }
+}

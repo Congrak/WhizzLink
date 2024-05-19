@@ -1,0 +1,15 @@
+.note {
+    color: #cbc4c4;
+    font-size: x-small;
+}
+
+.link {
+    color: #cbc4c4;
+    text-decoration: none !important;
+    font-size: x-small;
+}
+
+.link:hover {
+    text-decoration: underline !important;
+    text-decoration-color: #F4652D !important;
+}

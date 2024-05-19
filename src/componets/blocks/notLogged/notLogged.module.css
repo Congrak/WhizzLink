@@ -1,0 +1,19 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.title {
+    margin: 0;
+}
+
+.text {
+    color: #cbc4c4;
+    text-align: center;
+}

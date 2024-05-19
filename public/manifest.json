@@ -1,0 +1,57 @@
+{
+    "name": "WhizzLink: Shorten, Transform, Conect",
+    "short_name": "WhizzLink",
+    "start_url": "https://whizzlink.vercel.app/",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "background_color": "#171717",
+    "description": "Unlock the power of open-source technology to swiftly create and manage short URLs or QR codes with just a click. Experience a fast, secure, and intuitive platform that simplifies your digital interactions.",
+    "icons": [
+        {
+            "src": "/icon-57x57.png",
+            "sizes": "57x57",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-60x60.png",
+            "sizes": "60x60",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-76x76.png",
+            "sizes": "76x76",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-114x114.png",
+            "sizes": "114x114",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-120x120.png",
+            "sizes": "120x120", 
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-152x152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-180x180.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+
+    ]
+}
