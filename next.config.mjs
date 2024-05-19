@@ -9,6 +9,8 @@ const nextConfig = {
         NEXT_GITHUB_CLIENT_ID: process.env.NEXT_GITHUB_CLIENT_ID,
         NEXT_GITHUB_CLIENT_SECRET: process.env.NEXT_GITHUB_CLIENT_SECRET,
         DATABASE_URL: process.env.DATABASE_URL,
+        DIRECT_URL: process.env.DIRECT_URL,
+        NODE_ENV: process.env.NODE_ENV,
         NEXT_GOOGLE_ANALITYCS: process.env.NEXT_GOOGLE_ANALITYCS,
         NEXT_GOOGLE_TAGS_MANAGER: process.env.NEXT_GOOGLE_TAGS_MANAGER,
     },
