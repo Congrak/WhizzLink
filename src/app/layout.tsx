@@ -5,7 +5,7 @@ import { Navbar } from "@/componets/navbar";
 import { TranslateProvider } from "@/provider/translate";
 import SessionProvider from "@/provider/session";
 import { Footer } from "@/componets/footer";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,6 +44,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="author" content="Rodrigo Celis <https://github.com/Congrak>" />
+        <GoogleTagManager gtmId={process.env.NEXT_GOOGLE_TAGS_MANAGER as string} />
         <body className={inter.className}>
           <TranslateProvider>
             <div style={{ maxWidth: "2000px" }}>

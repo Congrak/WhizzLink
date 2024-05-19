@@ -10,6 +10,7 @@ const nextConfig = {
         NEXT_GITHUB_CLIENT_SECRET: process.env.NEXT_GITHUB_CLIENT_SECRET,
         DATABASE_URL: process.env.DATABASE_URL,
         NEXT_GOOGLE_ANALITYCS: process.env.NEXT_GOOGLE_ANALITYCS,
+        NEXT_GOOGLE_TAGS_MANAGER: process.env.NEXT_GOOGLE_TAGS_MANAGER,
     },
     images: {
         domains: ["lh3.googleusercontent.com", "avatars.githubusercontent.com"],
