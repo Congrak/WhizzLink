@@ -5,6 +5,7 @@ import { Navbar } from "@/componets/navbar";
 import { TranslateProvider } from "@/provider/translate";
 import SessionProvider from "@/provider/session";
 import { Footer } from "@/componets/footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -51,6 +52,7 @@ export default function RootLayout({
               <Footer />
             </div>
           </TranslateProvider>
+          <GoogleAnalytics gaId={process.env.NEXT_GOOGLE_ANALITYCS as string} />
         </body>
       </html>
     </SessionProvider>
