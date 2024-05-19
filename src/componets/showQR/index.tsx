@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 import { ModalSign } from "../modal";
 import Image from "next/image";
 import { Button } from "../common/button";
-import style from "./showQR.module.css";
+import style from "./showqr.module.css";
 import { useCallback } from "react";
 import { handleDownload } from "../../utils/handleDownload";
 
