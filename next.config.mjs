@@ -13,6 +13,7 @@ const nextConfig = {
         PROJECT_ENV: process.env.PROJECT_ENV,
         NEXT_GOOGLE_ANALITYCS: process.env.NEXT_GOOGLE_ANALITYCS,
         NEXT_GOOGLE_TAGS_MANAGER: process.env.NEXT_GOOGLE_TAGS_MANAGER,
+        SECRET: process.env.SECRET,
     },
     images: {
         domains: ["lh3.googleusercontent.com", "avatars.githubusercontent.com"],
