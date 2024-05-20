@@ -21,12 +21,12 @@ const authHandler = NextAuth({
   },
   providers: [
     GoogleProvider({
-      clientId: process.env.NEXT_GOOGLE_CLIENT_ID as string,
-      clientSecret: process.env.NEXT_GOOGLE_CLIENT_SECRET as string,
+      clientId: process.env.NEXTAUTH_GOOGLE_CLIENT_ID as string,
+      clientSecret: process.env.NEXTAUTH_SECRET_GOOGLE_CLIENT as string,
     }),
     GitHubProvider({
-      clientId: process.env.NEXT_GITHUB_CLIENT_ID as string,
-      clientSecret: process.env.NEXT_GITHUB_CLIENT_SECRET as string,
+      clientId: process.env.NEXTAUTH_GITHUB_CLIENT_ID as string,
+      clientSecret: process.env.NEXTAUTH_SECRET_GITHUB_CLIENT as string,
     }),
   ],
   session: {
