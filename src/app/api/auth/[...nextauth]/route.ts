@@ -7,15 +7,10 @@ import prisma from "@/lib/prisma";
 const authHandler = NextAuth({
   adapter: PrismaAdapter(prisma),
   callbacks: {
-    async signIn({ user, account, profile }) {
-      if (account?.provider === "google" || account?.provider === "github") {
-        user.name = profile?.name;
-        user.email = profile?.email;
+    async session({ session, user }) {
+      if (session.user) {
+        session.user.id = user.id;
       }
-      return true;
-    },
-    async session({ session, user, token }) {
-      session.user = user;
       return session;
     },
   },
@@ -29,11 +24,11 @@ const authHandler = NextAuth({
       clientSecret: process.env.NEXTAUTH_SECRET_GITHUB_CLIENT as string,
     }),
   ],
-  secret: process.env.SECRET,
+  secret: process.env.NEXTAUTH_SECRET,
   session: {
     strategy: "database",
-    maxAge: 30 * 24 * 60 * 60, // 30 days
-    updateAge: 24 * 60 * 60, // 24 hours
+    maxAge: 30 * 24 * 60 * 60,
+    updateAge: 24 * 60 * 60,
   },
   cookies: {
     sessionToken: {

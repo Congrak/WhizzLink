@@ -44,22 +44,20 @@ export const AllLinks = () => {
   const handleDelete = useCallback(
     async (id: string, creatorId: string, type: "link" | "qr") => {
       try {
-        const res = await deleteItem({ id, creatorId, type });
-        console.log(res);
         if (creatorId !== session?.user?.id) {
-          throw new Error("Error deleting item - not authorized");
-          return notify("Error deleting item - not authorized", "❌");
+          notify("Error deleting item - not authorized", "❌");
+          return;
         }
+        await deleteItem({ id, creatorId, type });
         const newLinks = await getAllLinks({
           creatorId: session?.user?.id!,
           page,
         });
         setLinks(newLinks.links);
         setTotal(newLinks.totalPages);
-        return notify("Link deleted", "✅");
+        notify("Link deleted", "✅");
       } catch (error) {
-        throw new Error("Error deleting item - try again");
-        return notify("Error deleting link", "❌");
+        notify("Error deleting link", "❌");
       }
     },
     [page, session?.user?.id]

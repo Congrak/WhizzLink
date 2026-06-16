@@ -29,7 +29,6 @@ export const AllQRs = () => {
     setLoading(true);
     (async () => {
       const res = await getAllQR({ page, creatorId: session?.user?.id! });
-      console.log(res, "res");
       setData(res.qrs);
       setTotal(res.totalPages);
       setLoading(false);
@@ -39,22 +38,20 @@ export const AllQRs = () => {
   const handleDelete = useCallback(
     async (id: string, creatorId: string, type: "link" | "qr") => {
       try {
-        const res = await deleteItem({ id, creatorId, type });
-        console.log(res);
         if (creatorId !== session?.user?.id) {
-          throw new Error("Error deleting item - not authorized");
-          return notify("Error deleting item - not authorized", "❌");
+          notify("Error deleting item - not authorized", "❌");
+          return;
         }
+        await deleteItem({ id, creatorId, type });
         const newQRS = await getAllQR({
           creatorId: session?.user?.id!,
           page,
         });
         setData(newQRS.qrs);
         setTotal(newQRS.totalPages);
-        return notify("QR deleted", "✅");
+        notify("QR deleted", "✅");
       } catch (error) {
-        throw new Error("Error deleting item - try again");
-        return notify("Error deleting item - try again", "❌");
+        notify("Error deleting item - try again", "❌");
       }
     },
     [page, session?.user?.id]

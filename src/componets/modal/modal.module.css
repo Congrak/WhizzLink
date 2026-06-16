@@ -6,27 +6,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    outline: none;
 }
 
 .modalContainer {
+    min-width: 320px;
     width: fit-content;
     height: fit-content;
-    border: 1px solid #cbc4c4;
-    border-radius: 10px;
-    padding: 16px;
-    background-color: #171717;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 28px 24px;
+    background: rgba(18, 18, 22, 0.95);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     color: #FFFFFF;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
     opacity: 0;
-    animation: slideUp 0.3s ease forwards;
+    animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .icon {
     cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.icon:hover {
+    opacity: 1;
 }
 
 .icon:hover > svg > path {
@@ -35,11 +46,11 @@
 
 @keyframes slideUp {
     from {
-        transform: translateY(20%);
+        transform: translateY(16px) scale(0.97);
         opacity: 0;
     }
     to {
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
         opacity: 1;
     }
 }

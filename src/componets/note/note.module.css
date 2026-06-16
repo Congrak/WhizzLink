@@ -1,15 +1,18 @@
 .note {
-    color: #cbc4c4;
-    font-size: x-small;
+    color: #374151;
+    font-size: 0.75rem;
+    margin-top: 32px;
+    text-align: center;
 }
 
 .link {
-    color: #cbc4c4;
+    color: #4b5563;
     text-decoration: none !important;
-    font-size: x-small;
+    font-size: 0.75rem;
+    transition: color 0.2s ease;
 }
 
 .link:hover {
+    color: #F4652D;
     text-decoration: underline !important;
-    text-decoration-color: #F4652D !important;
 }

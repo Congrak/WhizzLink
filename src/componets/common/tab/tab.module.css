@@ -2,43 +2,40 @@
 .navigationBoxChecked {
     position: relative;
     cursor: pointer;
-    padding: 10px;
+    padding: 14px 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    overflow: hidden;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6b7280;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+}
+
+.navigationBox:hover {
+    color: #a0a0b0;
+}
+
+.navigationBoxChecked {
+    color: #FFFFFF;
+    border-bottom-color: #F4652D;
 }
 
 .navigationBox::after,
 .navigationBoxChecked::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0%;
-    height: 1px;
-    background-color: transparent;
-    transition: width 0.3s ease, background-color 0.3s ease, left 0.3s ease;
-}
-
-.navigationBox:hover::after {
-    width: 100%;
-    left: 0;
-    background-color: #666666;
-}
-
-.navigationBoxChecked::after {
-    width: 100%;
-    left: 0;
-    background-color: #F4652D;
+    display: none;
 }
 
 @media only screen and (max-width: 960px) {
     .navigationBox,
     .navigationBoxChecked {
-        padding: 5px;
-        font-size: 0.4rem;
+        padding: 12px 12px;
+        font-size: 0.75rem;
+        gap: 5px;
     }
 }

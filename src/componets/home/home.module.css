@@ -4,21 +4,45 @@
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
-    padding: 40px 0;
+    padding: 60px 20px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin: 16px 0 20px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #a0a0b0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .text {
-    color: #cbc4c4;
-    width: 80%;
+    color: #6b7280;
+    width: 100%;
+    max-width: 600px;
     text-align: center;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin-bottom: 40px;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 80%;
+    gap: 0;
+    width: 100%;
     text-align: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .navigation {
@@ -26,46 +50,48 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0 8px;
 }
-  
+
 .formAnimate {
-    animation: slideUp 0.5s ease-out;
+    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .welcome {
-    font-size: medium;
-    color: #cbc4c4;
+    font-size: 0.875rem;
+    color: #6b7280;
     text-align: left;
     width: 100%;
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 8px;
 }
 
 .avatar {
-    border-radius: 100% !important;
-    margin-left: 10px;
+    border-radius: 50% !important;
 }
 
 @keyframes slideUp {
     from {
-      transform: translateY(20%);
-      opacity: 0;
+        transform: translateY(12px);
+        opacity: 0;
     }
     to {
-      transform: translateY(0);
-      opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
+}
 
-  @media only screen and (max-width: 960px) {
+@media only screen and (max-width: 960px) {
     .title {
-        font-size: 1.5rem;
-        text-align: center;
+        font-size: 1.8rem;
     }
 
     .text {
-        font-size: 0.8rem;
-        text-align: center;
+        font-size: 0.85rem;
     }
- }
+}

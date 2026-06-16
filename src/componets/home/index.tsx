@@ -7,7 +7,6 @@ import { Tab } from "../common/tab";
 import { TABS_NAVIGATION } from "@/contants";
 import { Blocks } from "../blocks";
 import { Note } from "../note";
-import { Session } from "inspector";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 

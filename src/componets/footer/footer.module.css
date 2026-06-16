@@ -3,19 +3,30 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    border-top: #FFFFFF 2px solid;
-    color: #FFFFFF;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #6b7280;
+    padding: 8px 0;
 }
 
 .links {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 16px;
     width: fit-content;
-    margin-right: 20px;
+    margin-right: 24px;
+    align-items: center;
+}
+
+.links a {
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+.links a:hover {
+    opacity: 1;
 }
 
 .made {
-    font-size: small;
-    margin-left: 20px;
+    font-size: 12px;
+    margin-left: 24px;
 }
