@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://whizzlink.vercel.app";
+const BASE_URL = process.env.NEXT_URL as string;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

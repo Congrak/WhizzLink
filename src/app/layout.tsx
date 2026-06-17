@@ -9,7 +9,7 @@ import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const BASE_URL = "https://whizzlink.vercel.app";
+const BASE_URL = process.env.NEXT_URL as string;
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

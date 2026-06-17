@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/api/auth/"],
     },
-    sitemap: "https://whizzlink.vercel.app/sitemap.xml",
+    sitemap: `${process.env.NEXT_URL}sitemap.xml`,
   };
 }
