@@ -3,30 +3,43 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    color: #6b7280;
-    padding: 8px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    color: #4b5563;
+    padding: 10px 0;
 }
 
 .links {
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap: 14px;
     width: fit-content;
-    margin-right: 24px;
+    margin-right: 20px;
     align-items: center;
 }
 
 .links a {
-    opacity: 0.5;
+    opacity: 0.4;
     transition: opacity 0.2s ease;
+    display: flex;
+    align-items: center;
 }
 
 .links a:hover {
-    opacity: 1;
+    opacity: 0.9;
 }
 
 .made {
-    font-size: 12px;
-    margin-left: 24px;
+    font-size: 11px;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+    .made {
+        font-size: 10px;
+        margin-left: 14px;
+    }
+    .links {
+        margin-right: 14px;
+        gap: 10px;
+    }
 }

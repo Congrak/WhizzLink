@@ -1,31 +1,32 @@
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    padding: 20px 24px;
+    gap: 10px;
+    padding: 16px 20px 20px;
 }
 
 .gridItem {
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 14px;
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.025);
     transition: border-color 0.2s ease, background 0.2s ease;
     display: flex;
     flex-direction: column;
     gap: 8px;
     text-align: left;
+    min-width: 0;
 }
 
 .gridItem:hover {
-    border-color: rgba(244, 101, 45, 0.5);
-    background: rgba(244, 101, 45, 0.04);
+    border-color: rgba(244, 101, 45, 0.4);
+    background: rgba(244, 101, 45, 0.03);
 }
 
 .link {
     color: #e5e7eb;
     text-decoration: none !important;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 500;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -41,7 +42,7 @@
 
 .text {
     color: #6b7280;
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -59,26 +60,29 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-top: 4px;
+    margin-top: 2px;
 }
 
 .icon {
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.45;
     transition: opacity 0.2s ease;
+    display: flex;
+    align-items: center;
 }
 
 .icon:hover {
     opacity: 1;
 }
 
-.icon:hover > svg > path {
+.icon:hover>svg>path {
     fill: #F4652D;
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 700px) {
     .container {
-        grid-template-columns: repeat(1, 1fr);
-        padding: 16px;
+        grid-template-columns: 1fr;
+        padding: 12px 14px 16px;
+        gap: 8px;
     }
 }

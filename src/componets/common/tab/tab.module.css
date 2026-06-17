@@ -2,23 +2,24 @@
 .navigationBoxChecked {
     position: relative;
     cursor: pointer;
-    padding: 14px 20px;
+    padding: 12px 8px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    font-size: 0.875rem;
+    gap: 4px;
+    font-size: 0.68rem;
     font-weight: 500;
     color: #6b7280;
     transition: color 0.2s ease;
     white-space: nowrap;
     border-bottom: 2px solid transparent;
-    margin-bottom: -1px;
+    flex: 1;
+    min-width: 0;
 }
 
 .navigationBox:hover {
-    color: #a0a0b0;
+    color: #9ca3af;
 }
 
 .navigationBoxChecked {
@@ -26,16 +27,12 @@
     border-bottom-color: #F4652D;
 }
 
-.navigationBox::after,
-.navigationBoxChecked::after {
-    display: none;
-}
-
-@media only screen and (max-width: 960px) {
+@media only screen and (min-width: 480px) {
     .navigationBox,
     .navigationBoxChecked {
-        padding: 12px 12px;
-        font-size: 0.75rem;
-        gap: 5px;
+        padding: 13px 16px;
+        flex-direction: row;
+        gap: 7px;
+        font-size: 0.82rem;
     }
 }

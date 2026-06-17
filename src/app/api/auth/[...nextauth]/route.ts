@@ -24,7 +24,7 @@ const authHandler = NextAuth({
       clientSecret: process.env.NEXTAUTH_SECRET_GITHUB_CLIENT as string,
     }),
   ],
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.SECRET,
   session: {
     strategy: "database",
     maxAge: 30 * 24 * 60 * 60,

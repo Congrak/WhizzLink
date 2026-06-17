@@ -4,33 +4,35 @@
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
-    padding: 60px 20px 40px;
-    max-width: 900px;
-    margin: 0 auto;
+    padding: 40px 20px 36px;
     width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
 }
 
 .title {
-    font-size: 2.8rem;
+    font-size: clamp(1.4rem, 6vw, 2.5rem);
     font-weight: 800;
     text-align: center;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-    margin: 16px 0 20px;
-    background: linear-gradient(135deg, #FFFFFF 0%, #a0a0b0 100%);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 10px 0 14px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #9ca3af 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    width: 100%;
 }
 
 .text {
     color: #6b7280;
     width: 100%;
-    max-width: 600px;
+    max-width: 520px;
     text-align: center;
     line-height: 1.7;
-    font-size: 0.95rem;
-    margin-bottom: 40px;
+    font-size: clamp(0.8rem, 2.5vw, 0.92rem);
+    margin-bottom: 28px;
+    padding: 0 4px;
 }
 
 .content {
@@ -38,60 +40,58 @@
     flex-direction: column;
     gap: 0;
     width: 100%;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 14px;
     overflow: hidden;
 }
 
 .navigation {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(0, 0, 0, 0.2);
-    padding: 0 8px;
+    align-items: stretch;
+    justify-content: stretch;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(0, 0, 0, 0.15);
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.navigation::-webkit-scrollbar {
+    display: none;
 }
 
 .formAnimate {
-    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .welcome {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     color: #6b7280;
     text-align: left;
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
+    gap: 8px;
+    margin-bottom: 6px;
 }
 
 .avatar {
     border-radius: 50% !important;
+    flex-shrink: 0;
 }
 
 @keyframes slideUp {
-    from {
-        transform: translateY(12px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    from { transform: translateY(10px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
 }
 
-@media only screen and (max-width: 960px) {
-    .title {
-        font-size: 1.8rem;
+@media only screen and (max-width: 480px) {
+    .container {
+        padding: 28px 14px 28px;
     }
-
-    .text {
-        font-size: 0.85rem;
+    .content {
+        border-radius: 12px;
     }
 }

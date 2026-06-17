@@ -7,32 +7,33 @@
     align-items: center;
     justify-content: center;
     outline: none;
+    width: 90%;
+    max-width: 420px;
 }
 
 .modalContainer {
-    min-width: 320px;
-    width: fit-content;
+    width: 100%;
     height: fit-content;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.09);
     border-radius: 16px;
     padding: 28px 24px;
-    background: rgba(18, 18, 22, 0.95);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    background: rgba(15, 15, 18, 0.97);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
     color: #FFFFFF;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.04);
     opacity: 0;
-    animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fadeUp 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .icon {
     cursor: pointer;
-    opacity: 0.6;
+    opacity: 0.5;
     transition: opacity 0.2s ease;
 }
 
@@ -44,13 +45,13 @@
     fill: #F4652D;
 }
 
-@keyframes slideUp {
-    from {
-        transform: translateY(16px) scale(0.97);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0) scale(1);
-        opacity: 1;
+@keyframes fadeUp {
+    from { transform: translateY(14px) scale(0.97); opacity: 0; }
+    to   { transform: translateY(0)    scale(1);    opacity: 1; }
+}
+
+@media only screen and (max-width: 480px) {
+    .modalContainer {
+        padding: 22px 18px;
     }
 }

@@ -1,18 +1,17 @@
 .note {
-    color: #374151;
-    font-size: 0.75rem;
-    margin-top: 32px;
+    color: #2d3748;
+    font-size: 0.72rem;
+    margin-top: 28px;
     text-align: center;
 }
 
 .link {
-    color: #4b5563;
+    color: #374151;
     text-decoration: none !important;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     transition: color 0.2s ease;
 }
 
 .link:hover {
     color: #F4652D;
-    text-decoration: underline !important;
 }

@@ -47,7 +47,7 @@ export default function RootLayout({
         <GoogleTagManager gtmId={process.env.NEXT_GOOGLE_TAGS_MANAGER as string} />
         <body className={inter.className}>
           <TranslateProvider>
-            <div style={{ maxWidth: "2000px" }}>
+            <div style={{ maxWidth: "2000px", width: "100%", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
               <Navbar />
               {children}
               <Footer />

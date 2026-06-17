@@ -2,27 +2,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     width: 100%;
     height: fit-content;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .subtitle {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: #6b7280;
-    max-width: 280px;
-    line-height: 1.5;
+    max-width: 260px;
+    line-height: 1.55;
+    margin-bottom: 4px;
 }
 
 .error {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     color: #f87171;
-    background: rgba(248, 113, 113, 0.1);
-    border: 1px solid rgba(248, 113, 113, 0.2);
+    background: rgba(248, 113, 113, 0.08);
+    border: 1px solid rgba(248, 113, 113, 0.18);
     border-radius: 8px;
-    padding: 8px 12px;
-    margin-bottom: 8px;
+    padding: 7px 12px;
+    margin-bottom: 6px;
     width: 100%;
     text-align: center;
 }
