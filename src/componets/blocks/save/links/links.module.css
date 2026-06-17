@@ -75,7 +75,7 @@
     opacity: 1;
 }
 
-.icon:hover>svg>path {
+.icon:hover > svg > path {
     fill: #F4652D;
 }
 

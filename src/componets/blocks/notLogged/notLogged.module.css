@@ -20,7 +20,7 @@
     text-align: center;
     font-size: 0.85rem;
     line-height: 1.65;
-    max-width: 90%;
+    max-width: 420px;
     margin: 0 0 8px;
 }
 
@@ -28,7 +28,6 @@
     .wrapper {
         padding: 28px 16px;
     }
-
     .text {
         font-size: 0.8rem;
     }

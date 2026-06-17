@@ -14,5 +14,5 @@ export default async function RedirectPage({ params }: { params: { shorted: stri
         return redirect(link.url);
     }
 
-    return <h1>test</h1>
+    return redirect("/")
 }

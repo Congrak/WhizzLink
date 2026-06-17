@@ -9,9 +9,70 @@ import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const BASE_URL = "https://whizzlink.vercel.app";
+
 export const metadata: Metadata = {
-  title: "WhizzLink",
-  description: "Easy way to short links",
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default: "WhizzLink — Free URL Shortener & QR Code Generator",
+    template: "%s | WhizzLink",
+  },
+  description:
+    "WhizzLink is a free, open-source URL shortener and QR code generator. Shorten long links instantly, create QR codes, and manage everything from your personal dashboard.",
+  keywords: [
+    "URL shortener",
+    "link shortener",
+    "QR code generator",
+    "free URL shortener",
+    "short link",
+    "QR code",
+    "open source URL shortener",
+    "link management",
+    "custom short links",
+    "WhizzLink",
+  ],
+  authors: [{ name: "Rodrigo Celis", url: "https://github.com/Congrak" }],
+  creator: "Rodrigo Celis",
+  publisher: "WhizzLink",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: BASE_URL,
+    siteName: "WhizzLink",
+    title: "WhizzLink — Free URL Shortener & QR Code Generator",
+    description:
+      "Shorten long URLs and generate QR codes instantly. Free, fast and open-source.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "WhizzLink — Free URL Shortener & QR Code Generator",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WhizzLink — Free URL Shortener & QR Code Generator",
+    description:
+      "Shorten long URLs and generate QR codes instantly. Free, fast and open-source.",
+    images: ["/og-image.png"],
+    creator: "@congrak",
+  },
+  alternates: {
+    canonical: BASE_URL,
+  },
 };
 
 export default function RootLayout({
